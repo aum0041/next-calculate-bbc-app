@@ -18,7 +18,6 @@ export default function BmiPage() {
       const bmi = w / (h * h);
       setBmiResult(bmi.toFixed(2));
 
-      // เช็คเกณฑ์ BMI
       if (bmi < 18.5) setBmiStatus('น้ำหนักน้อย / ผอม');
       else if (bmi < 23) setBmiStatus('ปกติ (สุขภาพดี)');
       else if (bmi < 25) setBmiStatus('ท้วม / โรคอ้วนระดับ 1');
@@ -38,7 +37,6 @@ export default function BmiPage() {
 
   return (
     <div className="min-h-screen bg-[#f8f9fa] flex flex-col font-sans">
-      {/* Navbar สีฟ้า */}
       <div className="w-full bg-[#1e74fd] text-white py-3 flex justify-center items-center gap-3 text-sm font-bold shadow-sm">
         <Link href="/" className="hover:text-gray-200">หน้าหลัก</Link> <span>|</span>
         <Link href="/bmi" className="hover:text-gray-200">หน้า BMI</Link> <span>|</span>
@@ -46,7 +44,6 @@ export default function BmiPage() {
         <Link href="/car" className="hover:text-gray-200">หน้า CAR</Link>
       </div>
 
-      {/* Content */}
       <div className="flex-grow flex flex-col items-center pt-10 pb-10 px-4">
         <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md border border-gray-100 relative">
           
@@ -104,7 +101,6 @@ export default function BmiPage() {
           </Link>
         </div>
 
-        {/* Footer */}
         <div className="text-center text-[10px] text-gray-400 mt-8">
           <p>© 2024 SAU. All rights reserved.</p>
           <p>Created by Nimmin SAU</p>
